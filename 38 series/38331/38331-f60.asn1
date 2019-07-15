@@ -2895,7 +2895,8 @@ MeasResultEUTRA ::=                     SEQUENCE {
     eutra-PhysCellId                        PhysCellId,
     measResult                              MeasQuantityResultsEUTRA,
 
-    cgi-Info                                CGI-InfoEUTRA                                                               OPTIONAL,...
+    cgi-Info                                CGI-InfoEUTRA                                                               OPTIONAL,
+    ...
 }
 
 MultiBandInfoListEUTRA ::=              SEQUENCE (SIZE (1..maxMultiBands)) OF FreqBandIndicatorEUTRA
@@ -4813,7 +4814,7 @@ SIB-Mapping ::=                     SEQUENCE (SIZE (1..maxSIB)) OF SIB-TypeInfo
 
 SIB-TypeInfo ::=                    SEQUENCE {
     type                                ENUMERATED {sibType2, sibType3, sibType4, sibType5, sibType6, sibType7, sibType8, sibType9,
-                                                    spare8, spare7, spare6, spare5, spare4, spare3, spare2, spare1,... },
+                                                    spare8, spare7, spare6, spare5, spare4, spare3, spare2, spare1, ... },
     valueTag                            INTEGER (0..31)                                                  OPTIONAL,  -- Cond SIB-TYPE
     areaScope                           ENUMERATED {true}                                                OPTIONAL  -- Need S
 }
