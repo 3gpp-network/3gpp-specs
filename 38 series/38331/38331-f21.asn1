@@ -513,7 +513,7 @@ CrossCarrierSchedulingConfig ::=		SEQUENCE {
 		other									SEQUENCE {					
 			schedulingCellId						ServCellIndex,
 			cif-InSchedulingCell					INTEGER (1..7)
-		}																	 -- Cond SCellOnly
+		}
 	},
 	...
 }
@@ -1853,11 +1853,11 @@ PUCCH-Resource ::= 						SEQUENCE {
 	intraSlotFrequencyHopping				ENUMERATED { enabled }													OPTIONAL,	 -- Need R
 	secondHopPRB							PRB-Id																	OPTIONAL,	 -- Need R
 	format									CHOICE {
-		format0									PUCCH-format0,														 -- Cond InFirstSetOnly
-		format1									PUCCH-format1,														 -- Cond InFirstSetOnly
-		format2									PUCCH-format2,														 -- Cond NotInFirstSet
-		format3									PUCCH-format3,														 -- Cond NotInFirstSet
-		format4									PUCCH-format4														 -- Cond NotInFirstSet
+		format0									PUCCH-format0,
+		format1									PUCCH-format1,
+		format2									PUCCH-format2,
+		format3									PUCCH-format3,
+		format4									PUCCH-format4	
 	}
 }
 
