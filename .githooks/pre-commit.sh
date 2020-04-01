@@ -5,7 +5,7 @@ git stash save --keep-index $STASH_NAME
 TEST_RESULT = $?
 
 STASHES=$(git stash list)
-if [[ $STASHES == "$STASH_NAME" ]]; then
+if [ "$STASHES" = "$STASH_NAME" ]; then
   git stash pop -q
 fi
 
