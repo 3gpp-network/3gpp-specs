@@ -6,10 +6,12 @@ function Test-Asn1 {
   }
 
   Write-Host ("Validating " + $file)
-  $validationResult = grun ASN_3gpp modules $file 2>&1
+  $tempFile = New-TemporaryFile
+  grun ASN_3gpp modules $file > $null 2>$tempFile
+  $validationResult = Get-Content $tempFile
   If ($validationResult.Length -ne 0) {
     Write-Warning ("Validation failed: " + $file)
-    Write-Warning "$validationResult"
+    Write-Host "$validationResult" -Separator "`n"
     Return 1
   }
   Return 0
@@ -21,7 +23,7 @@ $lines = $measureInfo.Lines
 Write-Host ("$lines" + " staged file(s):")
 Write-Host $staged -Separator "`n"
 
-If ($lines -eq 0) {
+If ($lines -eq 1) {
   $file = $staged
   $result = Test-Asn1 -file $file
   Exit $result
