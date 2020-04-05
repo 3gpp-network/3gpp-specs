@@ -8,6 +8,7 @@ git stash save --keep-index $stashName
 $validateResult = $?
 
 git stash pop
+git stash drop
 
 If ($validateResult -eq $TRUE) {
   Exit 0
