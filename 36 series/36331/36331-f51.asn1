@@ -4783,7 +4783,7 @@ AntennaInfoDedicatedSTTI-r15 ::=	CHOICE {
 	setup								SEQUENCE {
 		transmissionModeDL-MBSFN-r15		ENUMERATED {tm9, tm10}		OPTIONAL,	 -- Need OR
 		transmissionModeDL-nonMBSFN-r15 	ENUMERATED {tm1, tm2, tm3, tm4, tm6, tm8, tm9,
-														tm10}		OPTIONAL,	--_Need OR
+														tm10}		OPTIONAL,	-- Need OR
 		codebookSubsetRestriction			CHOICE {
 			n2TxAntenna-tm3-r15					BIT STRING (SIZE (2)),
 			n4TxAntenna-tm3-r15					BIT STRING (SIZE (4)),
@@ -18582,6 +18582,3 @@ RRM-Config-NB ::=				SEQUENCE {
 
 
 END
-
-
-
