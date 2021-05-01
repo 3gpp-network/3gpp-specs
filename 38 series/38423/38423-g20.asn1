@@ -5448,7 +5448,7 @@ NRUESidelinkAggregateMaximumBitRate-ExtIEs XNAP-PROTOCOL-EXTENSION ::= {
 
 
 
-OfferedCapacity�::= INTEGER (1.. 16777216, ...)
+OfferedCapacity ::= INTEGER (1.. 16777216, ...)
 
 OffsetOfNbiotChannelNumberToEARFCN ::= ENUMERATED {
 		minusTen, 
